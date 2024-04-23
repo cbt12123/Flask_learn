@@ -10,7 +10,12 @@
 {% elif age==18 %}
     <div>您刚满18，需要父母陪同</div>
 {% else %}
-    <div>未满十八滚。</div>
+    <div>未满十八，不能进入。</div>
 {% endif %}
+
+
+{% for book in books %}
+    <div>图书名称： {{ book.name }}, 图书作者： {{ book.author }}</div>
+{% endfor %}
 </body>
 </html>

@@ -41,10 +41,23 @@ def filter_demo():
 def control_statement():
     age = 17
     books = [{
-        "name" "三国演义",
-        "author"
-    }]
-    return render_template("control.html", age=age)
+        "name": "三国演义",
+        "author": "罗贯中"
+    },
+    {
+        "name": "水浒传",
+        "author": "施耐庵"
+    }
+    ]
+    return render_template("control.html", age=age, books=books)
+
+@app.route("/child1")
+def child1():
+    return render_template("child1.html")
+
+@app.route("/child2")
+def child2():
+    return render_template("child2.html")
 
 @app.route('/blog/list')
 def book_list():
